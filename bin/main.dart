@@ -1,5 +1,8 @@
-import 'package:solid_dart/solid_dart.dart' as solid_dart;
+import 'package:solid_dart/1_S.dart' as S;
 
 void main(List<String> arguments) {
-  print('Hello world: ${solid_dart.calculate()}!');
+  var news = new S.News(title:"Single-responsibility principle", text:"A class should only have a single...");
+  print(news);
+  news.update("... modified");
+  print(news);
 }
