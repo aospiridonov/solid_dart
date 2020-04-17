@@ -1,5 +1,6 @@
 import 'package:solid_dart/1_S.dart' as S;
 import 'package:solid_dart/2_O.dart' as O;
+import 'package:solid_dart/3_L.dart' as L;
 
 void funcS(){
   var news = new S.News(title:"Single-responsibility principle", text:"A class should only have a single...");
@@ -19,7 +20,18 @@ void funcO(){
   print("sum area = ${areaCalculator.sum()}");
 }
 
+void funcL(){
+  var developer1 = L.FrontendDeveloper("Alex");
+  print(developer1.toString() + ' is have access: ${L.isHaveAccess(developer1)}' );
+  var developer2 = L.BackendDeveloper("Victor");
+  print(developer2.toString() + ' is have access: ${L.isHaveAccess(developer2)}' );
+  var pm1 = L.ProductManager("Harry");
+  //print(pm1.toString() + ' is have access: ${L.isHaveAccess(pm1)}' );
+  print(pm1.toString());
+}
+
 void main(List<String> arguments) {
   //funcS();
-  funcO();
+  //funcO();
+  funcL();
 }
